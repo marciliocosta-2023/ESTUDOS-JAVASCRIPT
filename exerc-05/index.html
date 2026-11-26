@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passsos com DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Primeiros passos com DOM</h1>
+    <p id="primeiro">Este é um parágrafo de exemplo para demonstrar a manipulação do DOM usando JavaScript.</p>
+    <p class="segundo">aprendendo DOM</p>
+    <div>Clique em mim</div>
+
+    <script>
+        var corpo = document.body;
+        corpo.style.backgroundColor = "grey";
+        var p1 = document.getElementById("primeiro");
+        p1.style.color = "red";
+        var p2 = document.getElementsByClassName("segundo")[0];
+        p2.style.color = "green";
+        var div = document.getElementsByTagName("div")[0];
+        div.style.color = "blue";
+
+        document.getElementById('primeiro').innerText = 'Este é um parágrafo de exemplo para demonstrar a manipulação do DOM usando JavaScript. KKKKKKKK';
+
+        var h1 = document.querySelector('h1.titulo');
+        h1.style.color = 'yellow';
+    </script>
+</body>
+</html>

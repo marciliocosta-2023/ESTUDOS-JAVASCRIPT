@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media de Notas</title>
+    <style>
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Média</h1>
+
+    Nota P1 <input type="text" id="nota1" placeholder="Digite a nota (0-5)" maxlength="1"><br>
+    Nota P2 <input type="text" id="nota2" placeholder="Digite a nota (0-5)" maxlength="1"><br>
+    <input type="button" value="Calcular Média" onclick="calcularMedia()">
+
+    <p id="resultado">Sua nota final é de: </p>
+
+
+    <script>
+        function calcularMedia() {
+            var txtnota = document.getElementById('nota1');
+            var txtnota2 = document.getElementById('nota2');
+            var nota = Number(txtnota.value) + Number(txtnota2.value);
+            var res = document.getElementById('resultado');
+
+            if (nota >= 5) {
+                res.innerHTML = `Sua média final é de: ${nota}, Parabéns! Você foi aprovado.`;
+            } else {
+                res.innerHTML = `Sua média final é de: ${nota}, Infelizmente você não foi aprovado.`;
+            }
+        }
+    </script>
+</body>
+</html>

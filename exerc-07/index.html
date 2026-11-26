@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Radar de Velocidade</title>
+</head>
+<body>
+    <input type="text" id="velocidade" placeholder="Digite a velocidade" maxlength="1">
+    <button onclick="verificarVelocidade()">Verificar Velocidade</button>
+    <p id="resultado">Sua velocidade é de 0 km/h</p>
+
+    <script>
+
+        function verificarVelocidade() {
+            var txtvel = document.getElementById('velocidade');
+            var vel = Number(txtvel.value);
+            var res = document.getElementById('resultado');
+
+            if (vel < 60) {
+                res.innerHTML = `Sua velocidade é de ${vel} km/h. Você está dentro da velocidade permitida.`;
+            } else {
+                res.innerHTML = `Sua velocidade é de ${vel} km/h. Você está acima da velocidade permitida. MULTADO!`;
+            }
+        }
+    </script>
+</body>
+</html>
